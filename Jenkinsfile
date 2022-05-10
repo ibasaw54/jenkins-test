@@ -57,6 +57,9 @@ pipeline {
               environment name: 'DEPLOY_TO', value: 'staging'
             }
           }
+          steps {
+            echo 'only for production'
+          }
         }
         
         // aws s3 에 파일을 올림(우선 배포 과정만 빠르게 보기 위해 정적호스팅으로 간단하게 설정)
